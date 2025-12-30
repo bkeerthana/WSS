@@ -1,0 +1,24 @@
+body{font-family:Arial,Helvetica,sans-serif;background-color:#f4f6f9;margin:0;padding:0}
+header{background-color:#1f2937;color:#fff;padding:15px 30px}
+header h1{margin:0;font-size:20px}
+nav{margin-top:5px;font-size:14px;color:#cbd5e1}
+.container{padding:30px}
+.card{background:#fff;border-radius:6px;padding:20px;margin-bottom:20px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.card h3{margin-top:0;color:#1f2937}
+.badge{display:inline-block;padding:4px 8px;font-size:12px;border-radius:4px;color:#fff}
+.badge-student{background:#2563eb}
+.badge-admin{background:#dc2626}
+.badge-warn{background:#d97706}
+.badge-ok{background:#16a34a}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+table th{background:#e5e7eb;padding:10px;text-align:left}
+table td{padding:8px;border-bottom:1px solid #e5e7eb}
+.footer{text-align:center;padding:10px;font-size:12px;color:#6b7280}
+a.button{display:inline-block;padding:8px 12px;background:#2563eb;color:#fff;text-decoration:none;border-radius:4px;margin-right:8px}
+a.button-danger{background:#dc2626}
+a.button-muted{background:#6b7280}
+.alert{padding:10px 12px;border-radius:6px;margin:10px 0}
+.alert-warn{background:#fff7ed;border:1px solid #fdba74;color:#9a3412}
+.alert-ok{background:#ecfdf5;border:1px solid #6ee7b7;color:#065f46}
+.input{padding:8px 10px;border:1px solid #cbd5e1;border-radius:4px;width:260px}
+.btn{padding:8px 12px;border:0;border-radius:4px;background:#2563eb;color:#fff;cursor:pointer}
