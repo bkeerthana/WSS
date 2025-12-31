@@ -36,8 +36,11 @@ Map the assets to the attacks on CIA
 
 3_Day:AAA
 Authentication 
+      who can access
 Authorization
+      what they can access 
 Accountability 
+      what actually did 
 Activity: 
 - Log in as a  Valid account 
       - student
