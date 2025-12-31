@@ -33,6 +33,15 @@ Activity:
 Identify assets, location and why it is important 
 Map the assets to the attacks on CIA 
 
-3_Day:AAA
 
+3_Day:AAA
+Authentication 
+Authorization
+Accountability 
+Activity: 
+- Log in as a  Valid account 
+      - student
+      - admin
+- Demonstrated broken access control 
+      - vertical privilege escalation 
 
