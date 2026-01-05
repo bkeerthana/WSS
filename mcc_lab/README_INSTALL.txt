@@ -101,3 +101,6 @@ E) Optional: Force HTTPS (Advanced)
 If you enable SSL in Apache and run https://localhost, you can additionally
 demonstrate secure cookies. This is optional for class demo.
 
+
+To sniff the packets: 
+http.request.method == "POST"
