@@ -1,0 +1,52 @@
+Context: 
+
+Your organization maintains authentication logs in a database table, auth_logs.
+As a SOC analyst, your task is to use SQL queries to detect suspicious activities such as brute-force attacks, targeted admin attacks, abnormal login times, and risky geo-locations.
+
+
+1. Write an SQL command to list all available databases in the server.
+2. Select any one database of your choice and display its name.
+3. List all tables present in the selected database.
+4. Display the schema of any one table using an appropriate SQL command.
+5. Write an SQL command to create a database named soc.
+6. Select the soc database.
+7. Create a table named auth_logs with the following attributes:
+   log_id (Primary Key, Auto Increment)
+   username
+   ip_address
+   login_time
+   status (SUCCESS / FAILED)
+   role (admin / user)
+   country
+
+8. Display the structure of the auth_logs table.
+9. Insert at least 10 authentication log records into the auth_logs table with a mix of:
+   successful and failed logins
+   admin and user roles
+   different IP addresses and countries
+   date and time in the format - YYYY-MM-DD HH:MM:SS
+
+sample: INSERT INTO auth_logs (username, ip_address, login_time, status, role, country)
+VALUES ('admin', '192.168.1.10', '2026-01-05 10:15:30', 'FAILED', 'admin', 'India');
+
+
+10. Write an SQL query to display all records from the auth_logs table.
+11. Display only the records corresponding to failed login attempts.
+12. Retrieve all login attempts for a specific user (example: admin).
+13. Log Analysis and Investigation
+14. Display all login attempts sorted by login time (latest first).
+15. Identify the IP address with the highest number of failed login attempts.
+16. Write a query to find failed login attempts on admin accounts.
+17. Detect login attempts that occurred outside office hours (9 AM – 6 PM).
+18. List all login attempts originating from unexpected countries (excluding India).
+19. Identify users who have three or more failed login attempts.
+20. Which IP address appears to be involved in a brute-force attack?
+21. Which user or role is being targeted the most?
+
+Suggest two security controls that could be enforced based on your findings
+
+
+--------------------------------------------------------------------------------------
+The best view comes after the hardest climb 
+Consistency is more important than perfection
+--------------------------------------------------------------------------------------
