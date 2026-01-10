@@ -27,14 +27,14 @@ https://github.com/bkeerthana/WSS
 https://forms.office.com/r/0VzcKYdzdX
 
 
-2_Day:Lab 
+Lab:1 
 CIA and DAD 
 Activity:
 Identify assets, location and why it is important 
 Map the assets to the attacks on CIA 
 
 
-3_Day:AAA
+2_Day:AAA
 Authentication 
       who can access
 Authorization
@@ -48,12 +48,12 @@ Activity:
 - Demonstrated broken access control 
       - vertical privilege escalation 
 
-4_Day:PPT
+3_Day:PPT
 People 
 Policy 
 Technology 
 
-5_Day:Mc Cumber Model 
+4_Day:Mc Cumber Model 
 
 Developed by John Mc cumber in 1991
 have three dimensions 
@@ -71,7 +71,7 @@ have three dimensions
              - Data in transit 
 - Demo: 
 
-6_Day: Basic terminology 
+5_Day: Basic terminology 
 Applications of Mc cumber model 
   - audit 
   - incident response 
@@ -84,3 +84,7 @@ Basic Terminolgy
 - Exploit 
 - Risk
 - Attack
+
+2:Lab 
+sql 
+
