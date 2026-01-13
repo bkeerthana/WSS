@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTTP Methods GUI Demo (Fetch + PHP)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #fafafa; }
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; }
+    label { font-size: 13px; color: #333; display: block; margin-bottom: 6px; }
+    input, select { padding: 10px; border: 1px solid #ccc; border-radius: 8px; min-width: 180px; }
+    button { padding: 10px 14px; border: 1px solid #333; background: #fff; border-radius: 8px; cursor: pointer; }
+    button:hover { background: #f0f0f0; }
+    .status { font-weight: bold; padding: 10px; border-radius: 8px; border: 1px solid #ddd; background: #f7f7f7; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #f3f3f3; }
+    pre { background: #111; color: #eee; padding: 12px; border-radius: 10px; overflow: auto; }
+    .small { font-size: 12px; color: #555; }
+  </style>
+</head>
+<body>
+
+<h2>HTTP Methods Demo (GUI) — GET / POST / PUT / DELETE using fetch()</h2>
+<p class="small">
+  Run via Apache (XAMPP): open <b> HTTP Request Demo</b>
+</p>
+
+<div class="card">
+  <h3>Input Form</h3>
+  <div class="row">
+    <div>
+      <label>User ID (for GET-by-id / PUT / DELETE)</label>
+      <input id="id" type="number" value="1" min="1"/>
+    </div>
+
+    <div>
+      <label>Name (for POST / PUT)</label>
+      <input id="name" type="text" value="Charlie"/>
+    </div>
+
+    <div>
+      <label>Role (for POST / PUT)</label>
+      <select id="role">
+        <option>Student</option>
+        <option>TA</option>
+        <option>Admin</option>
+        <option>Analyst</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 12px;">
+    <button onclick="getAll()">GET (All Users)</button>
+    <button onclick="getById()">GET (By ID)</button>
+    <button onclick="postUser()">POST (Create)</button>
+    <button onclick="putUser()">PUT (Update)</button>
+    <button onclick="deleteUser()">DELETE (Remove)</button>
+    <!-- <button onclick="refreshUsers()">Refresh Table</button>-->
+  </div>
+</div>
+
+<div class="card">
+  <h3>Status + Raw Response</h3>
+  <div id="status" class="status">Status: -</div>
+  <p class="small" id="requestInfo">Request: -</p>
+  <pre id="output">{}</pre>
+</div>
+
+<div class="card">
+  <h3>Users Table (Live View)</h3>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Role</th></tr>
+    </thead>
+    <tbody id="usersBody"></tbody>
+  </table>
+</div>
+
+<script>
+  const statusBox = document.getElementById("status");
+  const output    = document.getElementById("output");
+  const usersBody = document.getElementById("usersBody");
+  const requestInfo = document.getElementById("requestInfo");
+
+  function getId()   { return document.getElementById("id").value; }
+  function getName() { return document.getElementById("name").value; }
+  function getRole() { return document.getElementById("role").value; }
+
+  function setUI(res, method, url, dataObj) {
+    statusBox.textContent = `Status: ${res.status} ${res.statusText}`;
+    requestInfo.textContent = `Request: ${method} ${url}` + (dataObj ? ` | Body: ${JSON.stringify(dataObj)}` : "");
+  }
+
+  function showJson(obj) {
+    output.textContent = JSON.stringify(obj, null, 2);
+  }
+
+  async function callApi(method, url, bodyObj=null) {
+    const opts = { method, headers: { "Content-Type": "application/json" } };
+    if (bodyObj && method !== "GET" && method !== "DELETE") {
+      opts.body = JSON.stringify(bodyObj);
+    }
+
+    const res = await fetch(url, opts);
+    setUI(res, method, url, bodyObj);
+
+    const data = await res.json();
+    showJson(data);
+
+    if (method === "POST" || method === "PUT" || method === "DELETE") {
+      await refreshUsers();
+    }
+    return data;
+  }
+
+  function getAll() {
+    callApi("GET", "api.php");
+  }
+
+  function getById() {
+    callApi("GET", "api.php?id=" + encodeURIComponent(getId()));
+  }
+
+  function postUser() {
+    const payload = { name: getName(), role: getRole() };
+    callApi("POST", "api.php", payload);
+  }
+
+  function putUser() {
+    const payload = { name: getName(), role: getRole() };
+    callApi("PUT", "api.php?id=" + encodeURIComponent(getId()), payload);
+  }
+
+  function deleteUser() {
+    callApi("DELETE", "api.php?id=" + encodeURIComponent(getId()));
+  }
+
+  async function refreshUsers() {
+    const res = await fetch("api.php", { method: "GET" });
+    const data = await res.json();
+
+    usersBody.innerHTML = "";
+    const users = data.users || [];
+
+    for (const u of users) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${u.id}</td><td>${u.name}</td><td>${u.role}</td>`;
+      usersBody.appendChild(tr);
+    }
+  }
+
+  refreshUsers();
+</script>
+
+</body>
+</html>
