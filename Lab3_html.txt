@@ -1,0 +1,73 @@
+----------------------------------------------------------------------------------------------------------------------
+1. Create a simple HTML page with the following elements (contents are your choice):
+
+<title>
+<meta>
+Headings: <h1>, <h2>, <h3>
+Paragraphs: <p>
+Lists: <ul> or <ol> with at least 3 items
+Links: <a> with both internal and external links
+Images: <img> with proper alt attributes
+Table: <table> with at least 2 rows and 2 columns
+Multimedia: <audio> and <video> with controls enabled
+Embed content using <iframe> or <embed> (e.g., YouTube video or map).Title <title>
+Meta tags <meta>
+Headings: <h1>, <h2>, and <h3>
+Paragraph <p>
+Table <table> <tr> <td>
+Div and Span <div> <span>
+Anchor <a>
+Image <img>
+Audio <audio>
+Video <video>
+Iframe <iframe>
+Embed <embed>
+Object <object>
+Comments <!-- --> explaining the purpose of each element. 
+
+2. Visit a website of your choice and inspect its source code.
+Identify:
+Metadata and its purpose.
+Structure of headings and semantic elements.
+Multimedia elements like <video> or <iframe>.
+Take note of any security-relevant tags like CSP or sandboxed iframes
+
+3. Inspect the page you created and view the page source.
+
+4. Use CSS to:
+Set the font color of the heading to blue.
+Set the background color of the page to lightgray.
+Set the font size of the paragraph to 16px.
+Style the list with bullets and set the list items to have a margin of 10px.
+Style a div container with a border and padding.
+Style a heading (h1) with a font-size of 24px and text-align center.
+Apply a class to the paragraph and change its font-family to Arial.
+Use an ID selector to change the color of a specific element to red.
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+2. create a  basic form for user login and observe how form data is sent to the server using the browser developer tools. What are the risks of using GET and POST method. 
+
+
+3. Vulnerabilities in HTML Design 
+- comments 
+- hidden fields
+- add a link to an external site (malicious site)
+- image injection
+- modify the image tag to include an onerror event
+- input validation 
+- add csrf token to a form to avoid attacks
+
+- open the browser developers tools to inspect the HTML
+- Identify the hidden field
+- Identify the comment 
+- discuss why exposing sensitive data in hidden fields or comments is insecure
+- discuss the risk of linking to untrusted sites
+- simulate phishing 
+- how attackers can host malicious content using src
+- test the form without entering valid email or password 
+- discuss the importance of client side and server side validation 
+
+- how onerror can be used for cross-site scripting
