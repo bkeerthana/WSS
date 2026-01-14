@@ -94,4 +94,19 @@ How web works
 3:Lab 
 HTML 
 
+7_Day: 
+More on How web works  
+        - TCP handshake 
+        - HTTP Request 
+        - HTTP Response 
+
+HTTP Request 
+       - get 
+       - post 
+       - put
+       - delete
+
+Demo: 
+   http_demo 
+   Wireshark: to check the traffic http
 
