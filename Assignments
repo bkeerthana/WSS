@@ -5,11 +5,20 @@ CIA – identify what information or resources are protected and explain why pro
 PPT – identify the people involved, the policies or rules that apply, and the technology used to enforce them
 AAA – explain how users are authenticated, authorized, and monitored
 
+Theory 2: 
+Install the Flask framework in your system. Develop a simple Flask web application that displays a basic output on the browser.
+Document the complete procedure, including installation steps, application code, execution process, and output.
+
+
 Lab    1: 
           Examine the codes and attempt to understand them.
 
 Lab    2: 
           SQL assignment 
 
+Lab    3: 
+          Create a web application in XAMPP 
+
 Assignment 1: Deadline - 10.01.2026
 Assignment 2: Deadline - 13.01.2026
+Theory     2: Deadline - 19.01.2026
