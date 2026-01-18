@@ -1,0 +1,30 @@
+[
+  {
+    "id": "a1b2c3d4e5f6a7b8",
+    "type": "stamp",
+    "name": "Commemorative Stamp – Space Mission",
+    "country": "India",
+    "year": 2019,
+    "denomination": "₹5",
+    "condition": "mint",
+    "acquired_date": "2024-05-10",
+    "value_estimate": 120.0,
+    "notes": "Mint condition, bought from local collector.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": "0f1e2d3c4b5a6978",
+    "type": "coin",
+    "name": "Republic Coin",
+    "country": "India",
+    "year": 1985,
+    "denomination": "₹1",
+    "condition": "fine",
+    "acquired_date": "2023-11-20",
+    "value_estimate": 50.0,
+    "notes": "Slight wear, readable details.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  }
+]
