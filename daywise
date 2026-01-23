@@ -130,3 +130,18 @@ importance of javascript for cybersecurity
 javascript basics
 attack surface intro 
 
+11_Day: 
+Importance of curl 
+curl 
+ -o 
+ -O 
+ -i 
+ -I 
+ -v
+ -X 
+   get 
+   post 
+ -H 
+ -d 
+Demo: using the status_demo app
+Refer: curl notes 
