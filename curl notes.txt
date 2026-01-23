@@ -1,0 +1,23 @@
+curl -I http://localhost/wss/status_demo/public/
+curl -v http://localhost/wss/status_demo/public/
+curl http://localhost/wss/status_demo/public/api.php
+curl -i "http://localhost/wss/status_demo/public/api.php" -H "X-API-Key: lab123"
+# display both header and response
+curl -i -X POST "http://localhost/wss/status_demo/public/api.php" ^
+  -H "X-API-Key: lab123" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"name\":\"Anu\",\"phone\":\"9000000001\"}"
+
+curl -X DELETE http://localhost/wss/status_demo/public/api.php?id=999 -H "X-API-Key: lab123"
+
+curl -i -X PUT "http://localhost/wss/status_demo/public/api.php?id=2" ^
+  -H "X-API-Key: lab123" ^
+  -H "Content-Type: application/json" ^
+  -d "{\"name\":\"Rohan Updated\",\"phone\":\"9123456780\",\"friends\":[]}"
+
+
+
+
+
+
+
