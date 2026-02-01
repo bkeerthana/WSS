@@ -9,6 +9,9 @@ Theory 2:
 Install the Flask framework in your system. Develop a simple Flask web application that displays a basic output on the browser.
 Document the complete procedure, including installation steps, application code, execution process, and output.
 
+Theory 3: 
+Explore any 2 real-time attacks with respect to the web application as per your choice 
+
 
 Lab    1: 
           Examine the codes and attempt to understand them.
@@ -17,7 +20,10 @@ Lab    2:
           SQL assignment 
 
 Lab    3: 
-          Create a web application in XAMPP 
+          Create a web application (using XAMPP) 
+
+Lab    4: 
+          Exploring the curl command line 
 
 Assignment 1: Deadline - 10.01.2026
 Assignment 2: Deadline - 13.01.2026
