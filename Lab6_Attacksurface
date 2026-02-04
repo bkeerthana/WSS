@@ -1,0 +1,27 @@
+Extend the Attack Surface Lab application:
+Task 1:     
+toggle to include MODE:
+
+ATTACK_MODE
+DEFENSE_MODE
+
+In ATTACK_MODE
+   Vulnerabilities enabled (current lab)
+
+In DEFENSE_MODE
+    must:
+    Remove bypass logic 
+    Replace hardcoded credentials
+    Enable rate limiting
+
+Task 2: 
+Add Logging & Forensics Dimension 
+
+Add a simple auth_events.log file:
+To Log:
+
+Timestamp
+Username
+IP
+Scenario
+Result (success/failure)
