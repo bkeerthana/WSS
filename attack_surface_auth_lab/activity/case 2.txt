@@ -1,0 +1,27 @@
+Case Study 2: Backdoor Access Through Embedded Credentials
+
+(HARDCODED Credentials Scenario)
+
+Case Description
+
+A web-based authentication system was developed as part of a rapid application prototype. To simplify testing during development, a fixed username and password were embedded directly into the application logic. The development team planned to remove this mechanism before deployment.
+
+After deployment, users reported that login behavior was inconsistent. Some users could authenticate successfully even though their credentials were not stored in the database. Investigation revealed that authentication succeeded when a specific username and password combination was used, regardless of database content.
+
+The credentials were not visible on the login page, but anyone with access to the application source code or deployment files could identify them. These credentials could not be changed through the user interface and remained valid across application restarts.
+
+The organization later discovered that this access method was used to log in repeatedly without triggering any alerts.
+
+Task
+
+From this case study, determine:
+
+The attack surface
+
+The attack vector
+
+The vulnerability
+
+The root cause
+
+The impact on confidentiality, integrity, and access control

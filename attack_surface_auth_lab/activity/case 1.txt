@@ -1,0 +1,26 @@
+1: Unauthorized Dashboard Access Without Login
+
+(BYPASS Authentication Scenario)
+
+Case Description
+
+An internal web application used by a training organization provides access to a dashboard that displays user-specific information and administrative options. The application includes a login page where users are expected to authenticate using a username and password.
+
+During testing, it was observed that users could reach the dashboard even when invalid credentials were entered. In some cases, users were able to proceed without entering any credentials at all. Once the dashboard loaded, the system treated the user as authenticated and allowed access to protected functionality.
+
+The application did not display any error messages or warnings indicating that authentication had failed. Instead, a valid session was created, and the user was redirected directly to the dashboard page.
+
+This behavior was consistent across multiple browsers and did not require any special tools or advanced techniques.
+
+Task
+Based on the above scenario, identify:
+
+The attack surface
+
+The attack vector
+
+The vulnerability
+
+The root cause
+
+The impact on the application and users

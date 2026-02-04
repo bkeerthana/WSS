@@ -1,0 +1,22 @@
+Case Study 3: Account Compromise via Unlimited Login Attempts
+
+(NO Rate Limiting / Brute-Force Scenario)
+
+Case Description
+
+An online application allows users to authenticate using a username and password. The login functionality validates credentials against a backend database. However, the system does not restrict the number of login attempts that a user can make.
+
+An attacker targeted a known username and repeatedly attempted different password combinations using an automated script. The application responded identically to every failed login attempt and did not impose any delays, lockouts, or CAPTCHA challenges.
+
+Over time, the attacker successfully identified the correct password and gained access to the victim’s account. No alerts were generated, and the attack was not detected until unusual activity was observed in the user’s account.
+
+The application developers stated that security controls were temporarily disabled during testing to avoid interrupting demonstrations.
+
+Task
+
+Analyze the scenario and identify:
+The attack surface
+The attack vector
+The vulnerability
+The root cause
+The impact on the system and users
