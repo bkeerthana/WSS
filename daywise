@@ -145,3 +145,27 @@ curl
  -d 
 Demo: using the status_demo app
 Refer: curl notes 
+
+12_Day: 
+More on Curl 
+
+
+
+13_Day: 
+Objective 
+Anatomy of attack 
+
+
+14_Day: 
+Attack surface
+Use: Attack_surface_lab
+Session logout 
+
+5:Lab 
+Attack surface Lab 
+
+15_Day: 
+Attack surface 
+BOLA 
+Use: attack_surface_auth_lab
+
