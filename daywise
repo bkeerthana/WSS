@@ -169,3 +169,13 @@ Attack surface
 BOLA 
 Use: attack_surface_auth_lab
 
+16_Day:
+Threat modeling 
+SDLC - Lifecycle 
+security - Design phase - Threat modeling 
+        - Asset perspective
+                  - STRIDE 
+                  - PASTA
+        - Attacker perspective 
+        - Risk perspective 
+     
