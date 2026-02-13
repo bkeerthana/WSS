@@ -179,3 +179,21 @@ security - Design phase - Threat modeling
         - Attacker perspective 
         - Risk perspective 
      
+17_Day: 
+STRIDE 
+    - components 
+    - Data Flow
+    - representation of components 
+            - entity 
+            - process
+            - trust boundary 
+    - STRIDE 
+        with respect to login page 
+
+
+18_Day: 
+      Installation 
+      Exploring threat dragon 
+      documentation 
+      exploring other threat models 
+
