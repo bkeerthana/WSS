@@ -208,4 +208,22 @@ STRIDE
               - CWE 
               - CVSS 
 
-Next... CVSS
+Lab: 
+CVE 
+CWE 
+CVE Vs. CWE 
+Intro to CVSS
+     Base 
+        AV
+        AC
+        Pr 
+        UI 
+
+21_Day: 
+CVSS 
+ - Base 
+ - Temporal 
+      - Exploit 
+      - Patch
+      - Documentation 
+ - Environmental 
