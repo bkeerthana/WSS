@@ -1,0 +1,82 @@
+Activity 1: Inspect Stored Passwords
+Task : 
+Register 3 users:
+Two with same password
+One with different password
+Open phpMyAdmin → users table
+Compare pass_hash
+
+Questions
+Why are hashes different?
+Where is salt?
+What happens if you truncate the hash column?
+
+Activity 2: Convert to hash
+Change the code in register.
+    #$hash = password_hash($password, PASSWORD_DEFAULT);  # with salt 
+    #$hash = password_hash($password, PASSWORD_BCRYPT); # to specify the algorithm
+    $hash = hash('sha256', $password); # without salt
+Task
+Register new account
+Check the DB 
+
+Activity 3: Convert to Plaintext Storage
+Change the code in register + login.
+    #$hash = password_hash($password, PASSWORD_DEFAULT);  # with salt 
+    #$hash = password_hash($password, PASSWORD_BCRYPT); # to specify the algorithm
+    #$hash = hash('sha256', $password); # without salt
+      $hash = $password ;# plain text in register page
+
+Task
+Register new account
+Check the DB 
+
+
+Activity 4:Debug the login flow 
+Task
+Understand how fetch_assoc() works
+Identify array structure
+what happens when user not found
+
+Answer: 
+In login page: $stmt->execute();
+$res = $stmt->get_result();
+$user = $res->fetch_assoc();
+$stmt->close();
+
+// DEBUG (temporary)
+echo "<pre>";
+var_dump($user);
+echo "</pre>";
+exit; // stop here so page doesn't redirect
+
+Activity 5: Add Password Policy
+implement:
+Min 10 characters
+At least 1 uppercase
+At least 1 number
+At least 1 special character
+Use regex validation.
+
+Activity 6:  Add Login Attempt Limit
+Add column:
+ALTER TABLE users ADD failed_attempts INT DEFAULT 0;
+Modify login logic:
+Increase counter on failure
+Lock after 5 attempts
+
+Activity 7: Accountability
+Add the log details 
+action:
+Successful login
+Failed login
+Logout
+Registration
+
+Each log entry will contain:
+user_id (or NULL if unknown)
+email
+action
+IP address
+timestamp
+
