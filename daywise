@@ -227,3 +227,15 @@ CVSS
       - Patch
       - Documentation 
  - Environmental 
+
+22_Day: 
+Authentication 
+        - password 
+
+23_Day: 
+Authentication 
+       - offensive 
+       - defensive 
+
+24_Day: 
+intro to cookies
