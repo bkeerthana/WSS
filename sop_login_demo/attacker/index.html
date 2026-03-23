@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Attacker Page (SOP Demo)</h2>
+<button onclick="stealData()">Try to Access Profile</button>
+<pre id="output"></pre>
+<script>
+function stealData() {
+    fetch("http://localhost:9000/profile.php", {
+        credentials: "include"
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("output").innerText =
+            "Data:\n" + JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        document.getElementById("output").innerText =
+            "Blocked by SOP:\n" + err;
+        console.log(err);
+    });
+}
+</script>
+</body>
+</html>

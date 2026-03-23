@@ -1,0 +1,18 @@
+Quick Usage
+1. Extract to:
+C:\xampp\htdocs\
+2. Start victim server
+cd C:\xampp\htdocs\wss\sop_login_demo\victim
+C:\xampp\php\php.exe -S localhost:9000
+3. Login (create session)
+http://localhost:9000/login.php
+4. Open attacker page
+http://localhost/wss/sop_login_demo/attacker/index.html
+5. Click button
+Result:
+
+Blocked by SOP
+
+Activity 1: 
+enable the comment line in the victim/profile.php  
+and try to access from the attacker page 
