@@ -1,0 +1,234 @@
+
+Q1. Login and Analyze Token
+Login using valid credentials.
+Open debug_token.php.
+
+Tasks:
+
+Identify:
+Header
+Payload
+Signature
+List all fields present in payload.
+
+Question:
+
+Is the payload encrypted or encoded? Explain.
+Q2. Token Structure
+
+Task:
+
+Copy token and split into 3 parts.
+
+Question:
+
+What does each part represent?
+Why is signature necessary?
+
+Q3. Authentication Check
+
+Task:
+
+Access student_dashboard.php without login.
+
+Observation:
+
+What happens?
+Q4. Authorization Check
+
+Task:
+
+Login as student
+Try accessing:
+faculty_dashboard.php
+admin_dashboard.php
+
+Question:
+
+Why is access denied?
+
+Q5. Direct Page Access
+
+Task:
+
+Open:
+student_open.php
+
+Questions:
+
+Why is access granted without login?
+What security issue is this?
+Q6. Fix the Issue
+
+Task:
+
+Add authentication check to student_open.php
+
+Question:
+
+What changed after fixing?
+
+Q7. Modify Payload
+
+Task:
+
+Use tamper_token.php
+Change role to admin
+
+Observation:
+
+Try accessing admin dashboard
+
+Questions:
+
+Does it work?
+Why does it fail?
+
+Q8. Disable Signature Check
+
+Task:
+
+In auth_secure.php, comment:
+verify_jwt_signature_and_alg(...)
+
+Observation:
+
+Try tampered token again
+
+Questions:
+
+What changed?
+Why is signature verification important?
+
+Q9. Change Algorithm
+
+Task:
+
+In login.php, change:
+HS256 → none
+
+Observation:
+
+Test secure and insecure pages
+
+Questions:
+
+What happens when algorithm is not enforced?
+Why is alg=none dangerous?
+
+Q10. Remove exp
+
+Task:
+
+Remove exp from payload in login.php
+
+Observation:
+
+Try accessing dashboard
+
+Questions:
+
+Why is access denied?
+What does exp protect against?
+Q11. Disable Expiry Validation
+
+Task:
+
+Comment expiry check in auth_secure.php
+
+Observation:
+
+Try again
+
+Question:
+
+What vulnerability is introduced?
+
+Q12. Token Replay
+
+Task:
+
+Login and copy token
+Logout
+Restore token via DevTools
+
+Observation:
+
+Access dashboard
+
+Questions:
+
+Why does logout fail?
+What type of attack is this?
+
+Q13. Change Secret Key
+
+Task:
+
+Set in config.php:
+12345
+Q14. Forge Token
+
+Task:
+
+Use forge_token.php
+Create:
+user: attacker
+role: admin
+Q15. Test Forged Token
+
+Task:
+
+Use token via DevTools or reuse page
+
+Observation:
+
+Access admin dashboard
+
+Questions:
+
+Why did the forged token work?
+Why did tampered token fail but forged token succeed?
+What is the role of secret key here?
+
+Q16. Compare Attacks
+Attack Type	Method	Result	Reason
+Payload Tampering	Modify payload only	
+	
+
+Weak Secret Key	Create new token	
+	
+
+Logout Replay	Reuse token	
+	
+
+
+Q17.
+
+Why is JWT called stateless authentication?
+
+Q18.
+
+What are the limitations of JWT logout?
+
+Q19.
+
+Why should sensitive data not be stored in payload?
+
+Q20.
+
+List at least 3 ways to secure JWT implementation.
+
+
+Q21.
+
+Can you:
+
+create a token for another user
+access their dashboard
+Q22.
+
+Modify the system to:
+
+reject reused tokens
+enforce stronger security

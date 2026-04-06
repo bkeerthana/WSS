@@ -1,0 +1,28 @@
+
+Logout Weakness
+Task J1: Token Reuse
+Steps:
+Login and copy token
+Logout
+paste the token in devtools 
+key: jwt_token 
+value:Token
+refresh the page :http://localhost/wss/jwt_lab_student_editable/student_dashboard.php
+
+Task I1: Change Secret
+
+Steps:
+
+Open config.php
+Change secret to:
+12345
+
+Then:
+
+Use forge_token.php
+
+logout weakness = stolen valid token reused
+weak secret weakness = new fake token created
+
+Expiry Handling
+after 5 min it wont work 

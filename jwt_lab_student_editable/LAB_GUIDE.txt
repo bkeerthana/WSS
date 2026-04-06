@@ -1,0 +1,20 @@
+JWT LOGIN SCENARIO LAB 
+=================================================
+
+Setup
+-----
+1. Extract this folder into:
+   C:\xampp\htdocs\jwt_lab_student_editable
+
+2. Start Apache in XAMPP.
+
+3. Open:
+   http://localhost/jwt_lab_student_editable/index.php
+
+Demo Users
+----------
+student1 / student123
+faculty1 / faculty123
+admin1   / admin123
+
+
