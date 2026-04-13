@@ -1,0 +1,9 @@
+LAB TASKS
+
+1. Test each payload in payloads.html
+2. Observe which payload executes automatically
+3. Identify which require user interaction
+4. Compare results with secure.html
+5. Identify vulnerable line (innerHTML)
+6. Replace with textContent and test again
+7. Write report: source, sink, impact, mitigation

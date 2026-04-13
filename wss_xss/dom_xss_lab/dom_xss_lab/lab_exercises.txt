@@ -1,0 +1,65 @@
+LAB EXERCISES: DOM-BASED XSS
+
+Exercise 1:
+-----------
+Open vulnerable.html and enter plain text.
+Observe how the value appears in the preview area.
+
+Exercise 2:
+-----------
+Enter this payload:
+<img src=x onerror=alert('DOM XSS')>
+Question:
+Why does the alert execute?
+
+Exercise 3:
+-----------
+Check the browser URL after clicking Update.
+Question:
+Where is the payload stored?
+
+Exercise 4:
+-----------
+Identify the vulnerable line in JavaScript.
+Task:
+Explain why innerHTML is dangerous with untrusted data.
+
+Exercise 5:
+-----------
+Open secure.html and enter the same payload.
+Question:
+Why is the payload displayed as text instead of executing?
+
+Exercise 6:
+-----------
+Compare these two lines:
+output.innerHTML = value;
+output.textContent = value;
+Question:
+What is the difference?
+
+Exercise 7:
+-----------
+Modify vulnerable.html and replace innerHTML with textContent.
+Test again.
+
+Exercise 8:
+-----------
+Explain the difference between:
+- reflected XSS
+- stored XSS
+- DOM-based XSS
+
+Exercise 9:
+-----------
+Create a crafted URL containing the payload and share it in the lab.
+Question:
+Why can DOM-based XSS be delivered through a link?
+
+Exercise 10:
+------------
+Write a short report with:
+- source of input
+- sink used
+- effect
+- mitigation

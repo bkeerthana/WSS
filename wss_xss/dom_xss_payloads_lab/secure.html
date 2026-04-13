@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure DOM XSS Demo</title>
+</head>
+<body>
+
+<h2>Secure Version</h2>
+
+<textarea id="payload"></textarea><br>
+<button onclick="render()">Render</button>
+
+<div id="output"></div>
+
+<script>
+function render() {
+    var value = document.getElementById("payload").value;
+    document.getElementById("output").textContent = value; // Safe
+}
+</script>
+
+</body>
+</html>

