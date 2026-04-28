@@ -239,3 +239,31 @@ Authentication
 
 24_Day: 
 intro to cookies
+Intro to session 
+Vulnerbilites in cookies and session 
+session hijacking 
+session fixation 
+SOP 
+CORS 
+JWT 
+JWT with respect to authentication 
+Vulnerabilities present in JWT 
+How to overcome 
+   - rate limiting 
+   - encryption 
+          - symmetric 
+          - asymmetric 
+    - Access control 
+
+command injection 
+code injection 
+sql injection 
+xss 
+  reflected 
+  stored 
+  DOM based 
+
+
+
+
+
